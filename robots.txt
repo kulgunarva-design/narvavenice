@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kulgunarva.ee/sitemap.xml
+Sitemap: https://narvavenice.ee/sitemap.xml
