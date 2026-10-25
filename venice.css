@@ -86,3 +86,71 @@ h2{font-size:clamp(32px,3.4vw,48px)}
 .nv-archive-bar{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;margin-bottom:24px;font-size:12px}
 .nv-contact-arrival{margin:0 var(--gutter) 65px;padding:44px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,70px);align-items:center}
 @media(max-width:720px){.nv-current-place,.nv-contact-arrival{grid-template-columns:1fr;gap:22px;padding:34px 0}.nv-current-place figure,.nv-contact-arrival figure{padding:8px;border-radius:14px}.nv-current-place img,.nv-contact-arrival img{aspect-ratio:1.4}.nv-current-gallery-heading{padding-top:20px}.nv-archive-bar{font-size:11px}}
+
+/* Clothing design previews. */
+.nv-clothing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px}.nv-clothing-grid figure{margin:0;min-width:0}.nv-clothing-grid a{display:block;border-radius:10px;overflow:hidden;background:#d5eff9}.nv-clothing-grid a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.nv-clothing-grid img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}.nv-clothing-grid figcaption{margin-top:12px;font-weight:600}.nv-clothing-card>p:last-child{margin-top:20px}@media(max-width:720px){.nv-clothing-grid{grid-template-columns:1fr;gap:24px}}
+
+/* Compact clothing category and separate catalogue. */
+.nv-clothing-link{display:block;color:inherit;text-decoration:none;transition:border-color .2s}.nv-clothing-link:hover{border-color:var(--accent)}.nv-clothing-link:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.nv-clothing-cover{overflow:hidden;background:#d5eff9}.nv-shirt-back{height:100%;aspect-ratio:3/4;overflow:hidden;position:relative}.nv-shirt-back img{position:absolute;right:0;top:0;width:200%;max-width:none;height:100%;object-fit:fill}.nv-clothing-link .text-link{display:inline-block;margin-top:12px}.nv-clothing-grid h2{font-size:24px;margin:20px 0 10px}.nv-catalog-note{margin-top:28px}
+
+/* Compact photography on the home page only. */
+body[data-page="index.html"] .nv-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 48px;align-items:center;padding-top:24px;padding-bottom:28px}
+body[data-page="index.html"] .nv-hero-top{grid-column:1/-1}
+body[data-page="index.html"] .nv-hero-title{padding:0;min-width:0}
+body[data-page="index.html"] .nv-hero-aside{padding:0;max-width:440px}
+body[data-page="index.html"] .nv-hero-aside p{font-size:clamp(18px,2vw,25px);line-height:1.5;margin-bottom:20px}
+body[data-page="index.html"] .nv-hero-image{width:100%;max-width:480px;justify-self:end;border-radius:8px}
+body[data-page="index.html"] .nv-hero-image img{height:225px;object-position:center 58%}
+body[data-page="index.html"] .nv-image-note{position:static;background:none;color:var(--muted);padding:9px 0 0;font-size:10px;gap:12px}
+body[data-page="index.html"] .nv-image-note>span:last-child{display:none}
+body[data-page="index.html"] .nv-section{padding-block:40px}
+body[data-page="index.html"] .nv-current-place{grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:40px;padding-block:36px;margin-bottom:0}
+body[data-page="index.html"] .nv-current-place figure{padding:0;background:none;border:0;border-radius:0;box-shadow:none;width:100%;max-width:400px;justify-self:end}
+body[data-page="index.html"] .nv-current-place figure img{width:100%;height:210px;aspect-ratio:auto;object-fit:cover;object-position:center 62%;border-radius:8px}
+body[data-page="index.html"] .nv-story{grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:40px;padding-block:36px}
+body[data-page="index.html"] .nv-story figure{padding:0;background:none;width:100%;max-width:400px;border-radius:0}
+body[data-page="index.html"] .nv-story figure img{width:100%;height:225px;aspect-ratio:auto;border-radius:8px;object-fit:contain}
+body[data-page="index.html"] .nv-invitation{grid-template-columns:minmax(0,1fr) minmax(0,.65fr);padding:32px;gap:36px;margin-top:24px}
+body[data-page="index.html"] .nv-invitation img{width:100%;max-width:340px;height:195px;justify-self:end;object-position:center 65%;border-radius:8px}
+body[data-page="index.html"] .nv-current-place h2,body[data-page="index.html"] .nv-story-copy h2,body[data-page="index.html"] .nv-invitation h2{font-size:clamp(28px,2.7vw,38px)}
+@media(max-width:720px){
+body[data-page="index.html"] .nv-hero{grid-template-columns:1fr;gap:18px;padding-bottom:20px}
+body[data-page="index.html"] .nv-hero-top{grid-column:auto}
+body[data-page="index.html"] .nv-hero-aside{display:block;margin:0}
+body[data-page="index.html"] .nv-hero-aside p{font-size:19px;margin-bottom:12px}
+body[data-page="index.html"] .nv-hero-image{max-width:none}
+body[data-page="index.html"] .nv-hero-image img{height:180px}
+body[data-page="index.html"] .nv-section{padding-block:30px}
+body[data-page="index.html"] .nv-current-place,body[data-page="index.html"] .nv-story{grid-template-columns:1fr;gap:20px;padding-block:28px}
+body[data-page="index.html"] .nv-current-place figure,body[data-page="index.html"] .nv-story figure{max-width:360px;justify-self:start}
+body[data-page="index.html"] .nv-current-place figure img,body[data-page="index.html"] .nv-story figure img{height:180px}
+body[data-page="index.html"] .nv-invitation{grid-template-columns:1fr;padding:24px;gap:22px}
+body[data-page="index.html"] .nv-invitation img{max-width:320px;height:170px;justify-self:start}
+}
+
+/* Credited aerial view, exclusive to the about section. */
+.nv-about-photo{max-width:480px;margin-top:24px}.nv-about-photo>a{display:block}.nv-about-photo img{width:100%;height:auto;border-radius:8px}.nv-about-photo figcaption{font-size:11px;line-height:1.6;margin-top:8px}.nv-about-photo figcaption a{text-decoration:underline;text-underline-offset:3px}@media(max-width:720px){.nv-about-photo{max-width:360px;margin-top:20px}}
+
+/* Alternate photo and copy in the about section. */
+body[data-page="index.html"] .nv-about{grid-template-columns:minmax(0,.8fr) minmax(0,1fr);column-gap:40px;row-gap:20px;align-items:center}body[data-page="index.html"] .nv-about>.nv-section-label{grid-column:1/-1}body[data-page="index.html"] .nv-about>.nv-about-photo{margin:0;width:100%;max-width:440px;align-self:center}body[data-page="index.html"] .nv-about-content{min-width:0}body[data-page="index.html"] .nv-about-content h2{font-size:clamp(28px,2.7vw,38px)}body[data-page="index.html"] .nv-about .nv-two-copy{grid-template-columns:1fr;gap:14px;margin:20px 0}body[data-page="index.html"] .nv-about .nv-two-copy p{line-height:1.7}@media(max-width:720px){body[data-page="index.html"] .nv-about{grid-template-columns:1fr;gap:20px}body[data-page="index.html"] .nv-about>.nv-about-photo{max-width:360px}}
+
+/* Community photo to the left of the home events introduction. */
+body[data-page="index.html"] .nv-events-intro{grid-template-columns:minmax(0,.8fr) minmax(0,1fr);column-gap:40px;row-gap:20px;align-items:center}body[data-page="index.html"] .nv-events-intro>.nv-section-label{grid-column:1/-1}body[data-page="index.html"] .nv-events-photo{margin:0;width:100%;max-width:400px}body[data-page="index.html"] .nv-events-photo a{display:block}body[data-page="index.html"] .nv-events-photo img{width:100%;height:225px;object-fit:cover;object-position:center 43%;border-radius:8px}body[data-page="index.html"] .nv-events-intro .nv-heading-row{flex-direction:column;align-items:flex-start;gap:16px}body[data-page="index.html"] .nv-events-intro .nv-archive-note{grid-template-columns:1fr;padding-top:24px}body[data-page="index.html"] .nv-events-intro .nv-mini-mark{display:none}@media(max-width:720px){body[data-page="index.html"] .nv-events-intro{grid-template-columns:1fr;gap:20px}body[data-page="index.html"] .nv-events-photo{max-width:360px}body[data-page="index.html"] .nv-events-photo img{height:180px}}
+
+/* Place the events photo on the right on desktop. */
+@media(min-width:721px){body[data-page="index.html"] .nv-events-intro{grid-template-columns:minmax(0,1fr) minmax(0,.8fr)}body[data-page="index.html"] .nv-events-intro>.nv-events-photo{grid-column:2;grid-row:2;justify-self:end}body[data-page="index.html"] .nv-events-intro>div:not(.nv-section-label){grid-column:1;grid-row:2}}
+
+/* Round the visible archive photograph itself, without letterboxing. */
+body[data-page="index.html"] .nv-story figure img{height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;border-radius:8px}
+
+/* Long-form introduction to Kulgu. */
+.nv-place-heading{max-width:840px;margin-inline:auto;padding:48px 28px 30px}.nv-place-heading h1{font-size:clamp(38px,5vw,64px);margin:24px 0 16px}.nv-place-heading>p{font-size:clamp(19px,2vw,24px)}.nv-place-story{max-width:840px;margin:0 auto 60px;padding:0 28px}.nv-place-story p{font-size:16px;line-height:1.85;max-width:none;margin-bottom:18px;color:var(--muted)}.nv-place-story h2{font-size:clamp(26px,3vw,34px);margin:38px 0 20px;line-height:1.2}.nv-place-story .nv-place-closing{border-top:1px solid var(--line);padding-top:24px;margin-top:32px;font-family:Georgia,serif;font-size:22px;color:var(--ink)}.nv-place-story>.text-link{margin-top:8px}@media(max-width:720px){.nv-place-heading{padding:30px 22px 24px}.nv-place-story{padding-inline:22px;margin-bottom:40px}.nv-place-story p{font-size:15px;line-height:1.75}}
+
+/* Participation and support. */
+.nv-help-heading h1{font-size:clamp(36px,5vw,64px)}.nv-help-heading>p{font-size:19px;max-width:720px}.nv-help-wrap{margin:0 var(--gutter) 60px}.nv-help-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.nv-help-card{padding:28px;border:1px solid var(--line);border-radius:10px;display:flex;align-items:flex-start;flex-direction:column}.nv-help-card h2{font-size:28px;margin:14px 0}.nv-help-card p{font-size:15px;color:var(--muted);margin-bottom:20px}.nv-help-card .text-link{margin-top:auto}.nv-help-plans{margin-top:40px;padding-top:30px;border-top:1px solid var(--line)}.nv-help-plans h2,.nv-help-contact h2{font-size:32px;margin-bottom:16px}.nv-help-plans>p,.nv-help-contact p{color:var(--muted);font-size:15px}.nv-help-plans ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin:26px 0}.nv-help-plans h3{font-size:22px;margin-bottom:12px}.nv-help-plans li p{font-size:14px;color:var(--muted)}.nv-help-contact{padding-top:28px;margin-top:28px;border-top:1px solid var(--line)}.nv-help-contact .text-link{margin:20px 0}.nv-help-contact .nv-help-status{font-size:13px}.nv-invitation .nv-help-home-link{display:block;width:fit-content;margin-top:16px;font-size:13px}@media(max-width:720px){.nv-help-grid,.nv-help-plans ul{grid-template-columns:1fr}.nv-help-card{padding:22px}.nv-help-card h2{font-size:25px}.nv-help-heading>p{font-size:17px}}
+
+/* Keep the expanded main navigation comfortable at intermediate widths. */
+.nv-help-card h2:first-child{margin-top:0}@media(min-width:721px){.nv-header{flex-wrap:wrap}.nv-header nav{flex-wrap:wrap;column-gap:20px;row-gap:6px}}
+
+/* Volunteer application. */
+.nv-vol-wrap{max-width:840px;margin:0 auto 60px;padding:0 28px}.nv-vol-wrap form{border:1px solid var(--line);border-radius:10px;padding:28px}.nv-vol-wrap form>p{font-size:13px;color:var(--muted);margin-bottom:20px}.nv-vol-row,.nv-vol-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.nv-vol-field{margin-bottom:22px}.nv-vol-field label{display:block;font-size:14px;margin-bottom:8px}.nv-vol-field input,.nv-vol-field textarea{width:100%;min-width:0;border:1px solid #8daebe;border-radius:6px;background:#fff;color:var(--ink);padding:11px 12px}.nv-vol-field textarea{resize:vertical}.nv-vol-wrap fieldset{border:1px solid var(--line);border-radius:6px;padding:18px;margin:0 0 24px}.nv-vol-wrap legend{font-size:14px;padding:0 6px}.nv-vol-check{display:flex;align-items:flex-start;gap:10px;font-size:14px;cursor:pointer}.nv-vol-check input{flex-shrink:0;width:18px;height:18px;margin-top:3px;accent-color:var(--accent)}.nv-vol-consent{margin:24px 0 14px}.nv-vol-submit{border:0;border-radius:6px;padding:12px 24px;background:var(--accent);color:#fff;cursor:pointer}.nv-vol-fallback{margin-top:24px;font-size:14px}.nv-vol-fallback a{text-decoration:underline}@media(max-width:720px){.nv-vol-wrap{padding-inline:22px}.nv-vol-wrap form{padding:20px}.nv-vol-row,.nv-vol-choices{grid-template-columns:1fr;gap:0}.nv-vol-choices{gap:14px}}
