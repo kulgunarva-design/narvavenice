@@ -157,3 +157,12 @@ body[data-page="index.html"] .nv-story figure img{height:auto;max-height:none;as
 
 /* Static language links keep the existing language switcher appearance. */
 .nv-languages a{font-family:inherit;text-decoration:none;line-height:normal}.nv-photo{text-decoration:none;color:inherit}
+
+/* Use the available screen for the complete photo, preserving its proportions. */
+.nv-lightbox{width:98vw;max-width:none;max-height:96vh;max-height:96dvh;padding:12px;margin:auto}
+.nv-lightbox[open]{display:flex;flex-direction:column}
+.nv-lightbox-bar{flex-shrink:0;flex-wrap:wrap}
+.nv-lightbox img{height:calc(96vh - 100px);height:calc(96dvh - 100px);min-height:0;width:100%;object-fit:contain;object-position:center}
+.nv-lightbox-original{color:white;font-size:13px;text-decoration:underline;text-underline-offset:3px}
+.nv-lightbox-status{color:white;font-size:14px;padding:24px 8px;min-height:100px}
+@media(max-width:600px){.nv-lightbox{width:100vw;max-height:100vh;max-height:100dvh;padding:8px}.nv-lightbox img{height:calc(100vh - 125px);height:calc(100dvh - 125px)}.nv-lightbox-bar{gap:8px}.nv-lightbox button{padding:7px 12px}.nv-lightbox-original{font-size:11px}}
