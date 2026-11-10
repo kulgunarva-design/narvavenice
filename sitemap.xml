@@ -1764,4 +1764,7 @@
   <url>
     <loc>https://narvavenice.ee/en/honey.html</loc>
   </url>
+  <url><loc>https://narvavenice.ee/map.html</loc></url>
+  <url><loc>https://narvavenice.ee/et/map.html</loc></url>
+  <url><loc>https://narvavenice.ee/en/map.html</loc></url>
 </urlset>
