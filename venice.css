@@ -172,3 +172,15 @@ body[data-page="index.html"] .nv-story figure img{height:auto;max-height:none;as
 .nv-header .nv-facebook-icon:hover{color:#0756b8;background:#eaf2f9}
 .nv-header .nv-facebook-icon:focus-visible{outline:2px solid #1877f2;outline-offset:3px}
 .nv-facebook-icon svg{display:block;width:26px;height:26px}
+
+/* Kulgu story feed */
+.nv-stories-feed{width:min(820px,calc(100% - 40px));margin:0 auto 80px;display:grid;gap:24px}
+.nv-story-card,.nv-stories-empty{padding:clamp(22px,4vw,42px);border:1px solid var(--line);border-radius:12px;background:#fffdf8}
+.nv-story-card h2,.nv-stories-empty h2{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:14px 0 18px}
+.nv-story-byline{font-size:13px;color:var(--muted);display:flex;align-items:baseline;flex-wrap:wrap;gap:6px}
+.nv-story-excerpt,.nv-story-body p,.nv-stories-empty p{line-height:1.8;overflow-wrap:anywhere}
+.nv-story-card summary{cursor:pointer;color:var(--accent);padding:14px 0;font-weight:600;min-height:44px;box-sizing:border-box}
+.nv-story-card summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.nv-story-card details[open]{border-top:1px solid var(--line);margin-top:20px}.nv-story-card:has(details[open]) .nv-story-excerpt{display:none}
+.nv-story-photos{display:grid;gap:20px}.nv-story-photos figure{margin:0}.nv-story-photos img{display:block;width:100%;height:auto;border-radius:8px}.nv-story-photos figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.nv-stories-home-link{display:inline-block;margin:16px 20px}.nv-stories-empty .nv-button{margin-top:16px}
