@@ -90,3 +90,21 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addFacebookIcon);
   else addFacebookIcon();
 })();
+
+// Explicit Russian home links bypass the Estonian default landing page.
+(() => {
+  function markRussianHomeLinks() {
+    const script = [...document.scripts].find(item => new URL(item.src || location.href).pathname.endsWith('/venice.js'));
+    if (!script) return;
+    const home = new URL('index.html', script.src);
+    document.querySelectorAll('a[href]').forEach(link => {
+      const url = new URL(link.href, location.href);
+      if (url.origin === home.origin && url.pathname === home.pathname) {
+        url.searchParams.set('lang', 'ru');
+        link.href = url.href;
+      }
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', markRussianHomeLinks);
+  else markRussianHomeLinks();
+})();
