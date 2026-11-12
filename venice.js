@@ -66,3 +66,27 @@ function renderEvent(){const root=document.getElementById('event-detail');if(!ro
 function init(){let saved='et';try{saved=localStorage.getItem('preferredLanguage')||'et';}catch{}const n=Number(new URLSearchParams(location.search).get('page'));galleryPage=Number.isInteger(n)&&n>=1&&n<=8?n:1;applyLanguage(document.documentElement.dataset.siteLang||saved);}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
+
+
+// Facebook group shortcut in the header.
+(() => {
+  function addFacebookIcon() {
+    const header = document.querySelector('.nv-header');
+    if (!header || header.querySelector('.nv-facebook-icon')) return;
+    const language = document.documentElement.dataset.siteLang || document.documentElement.lang;
+    const label = {ru: 'Наша группа в Facebook', et: 'Meie Facebooki grupp', en: 'Our Facebook group'}[language] || 'Our Facebook group';
+    const link = document.createElement('a');
+    link.className = 'nv-facebook-icon';
+    link.href = 'https://www.facebook.com/groups/2171012990297411';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.setAttribute('aria-label', label);
+    link.title = label;
+    link.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.095 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.026 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.971h-1.513c-1.491 0-1.956.931-1.956 1.887v2.263h3.328l-.532 3.49h-2.796V24C19.612 23.095 24 18.1 24 12.073z"/></svg>';
+    const languages = header.querySelector('.nv-languages');
+    if (languages) languages.before(link);
+    else header.append(link);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addFacebookIcon);
+  else addFacebookIcon();
+})();
